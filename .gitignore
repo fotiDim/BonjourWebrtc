@@ -1,0 +1,7 @@
+# Xcode
+.DS_Store
+*.pbxuser
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
