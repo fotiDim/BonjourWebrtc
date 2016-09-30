@@ -13,10 +13,6 @@
 		97B3FE781CD9ED7D001C816D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B3FE771CD9ED7D001C816D /* Assets.xcassets */; };
 		97B3FE7B1CD9ED7D001C816D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B3FE791CD9ED7D001C816D /* LaunchScreen.storyboard */; };
 		97B3FEAA1CD9EEC9001C816D /* BonjourServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3FE831CD9EEC9001C816D /* BonjourServiceManager.swift */; };
-		97B3FEAB1CD9EEC9001C816D /* libWebRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B3FE851CD9EEC9001C816D /* libWebRTC.a */; };
-		97B3FEAC1CD9EEC9001C816D /* RTCICECandidate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B3FEA21CD9EEC9001C816D /* RTCICECandidate+JSON.m */; };
-		97B3FEAD1CD9EEC9001C816D /* RTCICEServer+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B3FEA41CD9EEC9001C816D /* RTCICEServer+JSON.m */; };
-		97B3FEAE1CD9EEC9001C816D /* RTCSessionDescription+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B3FEA61CD9EEC9001C816D /* RTCSessionDescription+JSON.m */; };
 		97B3FEAF1CD9EEC9001C816D /* RTCVideoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3FEA71CD9EEC9001C816D /* RTCVideoChatViewController.swift */; };
 		97B3FEB01CD9EEC9001C816D /* WebrtcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3FEA81CD9EEC9001C816D /* WebrtcManager.swift */; };
 		97B3FEB11CD9EEC9001C816D /* WebrtcManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B3FEA91CD9EEC9001C816D /* WebrtcManagerProtocol.swift */; };
@@ -25,9 +21,13 @@
 		97B3FEB71CD9EF4C001C816D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B3FEB61CD9EF4C001C816D /* libc++.tbd */; };
 		97B3FEB91CD9EF57001C816D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B3FEB81CD9EF57001C816D /* VideoToolbox.framework */; };
 		97B3FEBB1CD9EF61001C816D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B3FEBA1CD9EF61001C816D /* libsqlite3.0.tbd */; };
+		DA9866951D9D5E7300C72025 /* RTCIceCandidate+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9866941D9D5E7300C72025 /* RTCIceCandidate+JSON.swift */; };
+		DA9866971D9D652500C72025 /* RTCSessionDescription+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9866961D9D652500C72025 /* RTCSessionDescription+JSON.swift */; };
+		FBED413E3A95B9C676E9696B /* Pods_BonjourWebrtc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2B8E0BFB4D690B98985BBB /* Pods_BonjourWebrtc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39EE0EF94A9A5CA8FFCB6CDF /* Pods-BonjourWebrtc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourWebrtc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonjourWebrtc/Pods-BonjourWebrtc.debug.xcconfig"; sourceTree = "<group>"; };
 		97B3FE6D1CD9ED7D001C816D /* BonjourWebrtc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonjourWebrtc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B3FE701CD9ED7D001C816D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B3FE721CD9ED7D001C816D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,42 +35,7 @@
 		97B3FE771CD9ED7D001C816D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97B3FE7A1CD9ED7D001C816D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B3FE7C1CD9ED7D001C816D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97B3FE821CD9EEC5001C816D /* BonjourWebrtc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BonjourWebrtc-Bridging-Header.h"; sourceTree = "<group>"; };
 		97B3FE831CD9EEC9001C816D /* BonjourServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonjourServiceManager.swift; sourceTree = "<group>"; };
-		97B3FE851CD9EEC9001C816D /* libWebRTC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWebRTC.a; sourceTree = "<group>"; };
-		97B3FE861CD9EEC9001C816D /* RTCAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioSource.h; sourceTree = "<group>"; };
-		97B3FE871CD9EEC9001C816D /* RTCAudioTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioTrack.h; sourceTree = "<group>"; };
-		97B3FE881CD9EEC9001C816D /* RTCDataChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCDataChannel.h; sourceTree = "<group>"; };
-		97B3FE891CD9EEC9001C816D /* RTCEAGLVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCEAGLVideoView.h; sourceTree = "<group>"; };
-		97B3FE8A1CD9EEC9001C816D /* RTCI420Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCI420Frame.h; sourceTree = "<group>"; };
-		97B3FE8B1CD9EEC9001C816D /* RTCICECandidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCICECandidate.h; sourceTree = "<group>"; };
-		97B3FE8C1CD9EEC9001C816D /* RTCICEServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCICEServer.h; sourceTree = "<group>"; };
-		97B3FE8D1CD9EEC9001C816D /* RTCMediaConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaConstraints.h; sourceTree = "<group>"; };
-		97B3FE8E1CD9EEC9001C816D /* RTCMediaSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaSource.h; sourceTree = "<group>"; };
-		97B3FE8F1CD9EEC9001C816D /* RTCMediaStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaStream.h; sourceTree = "<group>"; };
-		97B3FE901CD9EEC9001C816D /* RTCMediaStreamTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaStreamTrack.h; sourceTree = "<group>"; };
-		97B3FE911CD9EEC9001C816D /* RTCNSGLVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCNSGLVideoView.h; sourceTree = "<group>"; };
-		97B3FE921CD9EEC9001C816D /* RTCOpenGLVideoRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCOpenGLVideoRenderer.h; sourceTree = "<group>"; };
-		97B3FE931CD9EEC9001C816D /* RTCPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPair.h; sourceTree = "<group>"; };
-		97B3FE941CD9EEC9001C816D /* RTCPeerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPeerConnection.h; sourceTree = "<group>"; };
-		97B3FE951CD9EEC9001C816D /* RTCPeerConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPeerConnectionDelegate.h; sourceTree = "<group>"; };
-		97B3FE961CD9EEC9001C816D /* RTCPeerConnectionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPeerConnectionFactory.h; sourceTree = "<group>"; };
-		97B3FE971CD9EEC9001C816D /* RTCSessionDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSessionDescription.h; sourceTree = "<group>"; };
-		97B3FE981CD9EEC9001C816D /* RTCSessionDescriptionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSessionDescriptionDelegate.h; sourceTree = "<group>"; };
-		97B3FE991CD9EEC9001C816D /* RTCStatsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCStatsDelegate.h; sourceTree = "<group>"; };
-		97B3FE9A1CD9EEC9001C816D /* RTCStatsReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCStatsReport.h; sourceTree = "<group>"; };
-		97B3FE9B1CD9EEC9001C816D /* RTCTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCTypes.h; sourceTree = "<group>"; };
-		97B3FE9C1CD9EEC9001C816D /* RTCVideoCapturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoCapturer.h; sourceTree = "<group>"; };
-		97B3FE9D1CD9EEC9001C816D /* RTCVideoRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoRenderer.h; sourceTree = "<group>"; };
-		97B3FE9E1CD9EEC9001C816D /* RTCVideoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoSource.h; sourceTree = "<group>"; };
-		97B3FE9F1CD9EEC9001C816D /* RTCVideoTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoTrack.h; sourceTree = "<group>"; };
-		97B3FEA01CD9EEC9001C816D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
-		97B3FEA11CD9EEC9001C816D /* RTCICECandidate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTCICECandidate+JSON.h"; sourceTree = "<group>"; };
-		97B3FEA21CD9EEC9001C816D /* RTCICECandidate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTCICECandidate+JSON.m"; sourceTree = "<group>"; };
-		97B3FEA31CD9EEC9001C816D /* RTCICEServer+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTCICEServer+JSON.h"; sourceTree = "<group>"; };
-		97B3FEA41CD9EEC9001C816D /* RTCICEServer+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTCICEServer+JSON.m"; sourceTree = "<group>"; };
-		97B3FEA51CD9EEC9001C816D /* RTCSessionDescription+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTCSessionDescription+JSON.h"; sourceTree = "<group>"; };
-		97B3FEA61CD9EEC9001C816D /* RTCSessionDescription+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTCSessionDescription+JSON.m"; sourceTree = "<group>"; };
 		97B3FEA71CD9EEC9001C816D /* RTCVideoChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCVideoChatViewController.swift; sourceTree = "<group>"; };
 		97B3FEA81CD9EEC9001C816D /* WebrtcManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebrtcManager.swift; sourceTree = "<group>"; };
 		97B3FEA91CD9EEC9001C816D /* WebrtcManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebrtcManagerProtocol.swift; sourceTree = "<group>"; };
@@ -79,6 +44,11 @@
 		97B3FEB61CD9EF4C001C816D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		97B3FEB81CD9EF57001C816D /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		97B3FEBA1CD9EF61001C816D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		DA6FEEF81D9D7B980059C69A /* BonjourWebrtc-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BonjourWebrtc-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA9866941D9D5E7300C72025 /* RTCIceCandidate+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RTCIceCandidate+JSON.swift"; sourceTree = "<group>"; };
+		DA9866961D9D652500C72025 /* RTCSessionDescription+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RTCSessionDescription+JSON.swift"; sourceTree = "<group>"; };
+		DC2B8E0BFB4D690B98985BBB /* Pods_BonjourWebrtc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonjourWebrtc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FF15F2960D1AABBD683D48 /* Pods-BonjourWebrtc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonjourWebrtc.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonjourWebrtc/Pods-BonjourWebrtc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +61,7 @@
 				97B3FEB71CD9EF4C001C816D /* libc++.tbd in Frameworks */,
 				97B3FEB51CD9EF41001C816D /* CoreVideo.framework in Frameworks */,
 				97B3FEB31CD9EF39001C816D /* SystemConfiguration.framework in Frameworks */,
-				97B3FEAB1CD9EEC9001C816D /* libWebRTC.a in Frameworks */,
+				FBED413E3A95B9C676E9696B /* Pods_BonjourWebrtc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +78,8 @@
 				97B3FEB21CD9EF39001C816D /* SystemConfiguration.framework */,
 				97B3FE6F1CD9ED7D001C816D /* BonjourWebrtc */,
 				97B3FE6E1CD9ED7D001C816D /* Products */,
+				E04199FE694B7FBE52D8CB2D /* Pods */,
+				C4ABBE677727E7D4A4BC1648 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,16 +94,11 @@
 		97B3FE6F1CD9ED7D001C816D /* BonjourWebrtc */ = {
 			isa = PBXGroup;
 			children = (
+				DA9866931D9D5E7300C72025 /* extensions */,
 				97B3FE701CD9ED7D001C816D /* AppDelegate.swift */,
 				97B3FE721CD9ED7D001C816D /* ViewController.swift */,
+				DA6FEEF81D9D7B980059C69A /* BonjourWebrtc-Bridging-Header.h */,
 				97B3FE831CD9EEC9001C816D /* BonjourServiceManager.swift */,
-				97B3FE841CD9EEC9001C816D /* include */,
-				97B3FEA11CD9EEC9001C816D /* RTCICECandidate+JSON.h */,
-				97B3FEA21CD9EEC9001C816D /* RTCICECandidate+JSON.m */,
-				97B3FEA31CD9EEC9001C816D /* RTCICEServer+JSON.h */,
-				97B3FEA41CD9EEC9001C816D /* RTCICEServer+JSON.m */,
-				97B3FEA51CD9EEC9001C816D /* RTCSessionDescription+JSON.h */,
-				97B3FEA61CD9EEC9001C816D /* RTCSessionDescription+JSON.m */,
 				97B3FEA71CD9EEC9001C816D /* RTCVideoChatViewController.swift */,
 				97B3FEA81CD9EEC9001C816D /* WebrtcManager.swift */,
 				97B3FEA91CD9EEC9001C816D /* WebrtcManagerProtocol.swift */,
@@ -139,44 +106,34 @@
 				97B3FE771CD9ED7D001C816D /* Assets.xcassets */,
 				97B3FE791CD9ED7D001C816D /* LaunchScreen.storyboard */,
 				97B3FE7C1CD9ED7D001C816D /* Info.plist */,
-				97B3FE821CD9EEC5001C816D /* BonjourWebrtc-Bridging-Header.h */,
 			);
 			path = BonjourWebrtc;
 			sourceTree = "<group>";
 		};
-		97B3FE841CD9EEC9001C816D /* include */ = {
+		C4ABBE677727E7D4A4BC1648 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97B3FE851CD9EEC9001C816D /* libWebRTC.a */,
-				97B3FE861CD9EEC9001C816D /* RTCAudioSource.h */,
-				97B3FE871CD9EEC9001C816D /* RTCAudioTrack.h */,
-				97B3FE881CD9EEC9001C816D /* RTCDataChannel.h */,
-				97B3FE891CD9EEC9001C816D /* RTCEAGLVideoView.h */,
-				97B3FE8A1CD9EEC9001C816D /* RTCI420Frame.h */,
-				97B3FE8B1CD9EEC9001C816D /* RTCICECandidate.h */,
-				97B3FE8C1CD9EEC9001C816D /* RTCICEServer.h */,
-				97B3FE8D1CD9EEC9001C816D /* RTCMediaConstraints.h */,
-				97B3FE8E1CD9EEC9001C816D /* RTCMediaSource.h */,
-				97B3FE8F1CD9EEC9001C816D /* RTCMediaStream.h */,
-				97B3FE901CD9EEC9001C816D /* RTCMediaStreamTrack.h */,
-				97B3FE911CD9EEC9001C816D /* RTCNSGLVideoView.h */,
-				97B3FE921CD9EEC9001C816D /* RTCOpenGLVideoRenderer.h */,
-				97B3FE931CD9EEC9001C816D /* RTCPair.h */,
-				97B3FE941CD9EEC9001C816D /* RTCPeerConnection.h */,
-				97B3FE951CD9EEC9001C816D /* RTCPeerConnectionDelegate.h */,
-				97B3FE961CD9EEC9001C816D /* RTCPeerConnectionFactory.h */,
-				97B3FE971CD9EEC9001C816D /* RTCSessionDescription.h */,
-				97B3FE981CD9EEC9001C816D /* RTCSessionDescriptionDelegate.h */,
-				97B3FE991CD9EEC9001C816D /* RTCStatsDelegate.h */,
-				97B3FE9A1CD9EEC9001C816D /* RTCStatsReport.h */,
-				97B3FE9B1CD9EEC9001C816D /* RTCTypes.h */,
-				97B3FE9C1CD9EEC9001C816D /* RTCVideoCapturer.h */,
-				97B3FE9D1CD9EEC9001C816D /* RTCVideoRenderer.h */,
-				97B3FE9E1CD9EEC9001C816D /* RTCVideoSource.h */,
-				97B3FE9F1CD9EEC9001C816D /* RTCVideoTrack.h */,
-				97B3FEA01CD9EEC9001C816D /* SRWebSocket.h */,
+				DC2B8E0BFB4D690B98985BBB /* Pods_BonjourWebrtc.framework */,
 			);
-			path = include;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA9866931D9D5E7300C72025 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA9866941D9D5E7300C72025 /* RTCIceCandidate+JSON.swift */,
+				DA9866961D9D652500C72025 /* RTCSessionDescription+JSON.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		E04199FE694B7FBE52D8CB2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39EE0EF94A9A5CA8FFCB6CDF /* Pods-BonjourWebrtc.debug.xcconfig */,
+				F0FF15F2960D1AABBD683D48 /* Pods-BonjourWebrtc.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97B3FE7F1CD9ED7D001C816D /* Build configuration list for PBXNativeTarget "BonjourWebrtc" */;
 			buildPhases = (
+				B948F4E3C9A39724F80012F0 /* [CP] Check Pods Manifest.lock */,
 				97B3FE691CD9ED7D001C816D /* Sources */,
 				97B3FE6A1CD9ED7D001C816D /* Frameworks */,
 				97B3FE6B1CD9ED7D001C816D /* Resources */,
+				982CD97D158ABC0E9116AE31 /* [CP] Embed Pods Frameworks */,
+				77CA1C53348B9A050B2516CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,19 +207,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77CA1C53348B9A050B2516CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BonjourWebrtc/Pods-BonjourWebrtc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		982CD97D158ABC0E9116AE31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BonjourWebrtc/Pods-BonjourWebrtc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B948F4E3C9A39724F80012F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97B3FE691CD9ED7D001C816D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				97B3FEB01CD9EEC9001C816D /* WebrtcManager.swift in Sources */,
+				DA9866951D9D5E7300C72025 /* RTCIceCandidate+JSON.swift in Sources */,
 				97B3FE731CD9ED7D001C816D /* ViewController.swift in Sources */,
 				97B3FEB11CD9EEC9001C816D /* WebrtcManagerProtocol.swift in Sources */,
-				97B3FEAC1CD9EEC9001C816D /* RTCICECandidate+JSON.m in Sources */,
 				97B3FE711CD9ED7D001C816D /* AppDelegate.swift in Sources */,
-				97B3FEAE1CD9EEC9001C816D /* RTCSessionDescription+JSON.m in Sources */,
+				DA9866971D9D652500C72025 /* RTCSessionDescription+JSON.swift in Sources */,
 				97B3FEAF1CD9EEC9001C816D /* RTCVideoChatViewController.swift in Sources */,
-				97B3FEAD1CD9EEC9001C816D /* RTCICEServer+JSON.m in Sources */,
 				97B3FEAA1CD9EEC9001C816D /* BonjourServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +385,7 @@
 		};
 		97B3FE801CD9ED7D001C816D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39EE0EF94A9A5CA8FFCB6CDF /* Pods-BonjourWebrtc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -400,6 +408,7 @@
 		};
 		97B3FE811CD9ED7D001C816D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0FF15F2960D1AABBD683D48 /* Pods-BonjourWebrtc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

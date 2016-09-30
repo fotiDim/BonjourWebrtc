@@ -39,7 +39,7 @@ class BonjourServiceManager : NSObject {
   }
   
   lazy var session: MCSession = {
-    let session = MCSession(peer: self.myPeerId, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.required)
+    let session = MCSession(peer: self.myPeerId, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
     session.delegate = self
     return session
   }()
@@ -76,9 +76,9 @@ class BonjourServiceManager : NSObject {
     
   }
   
-  func sendDataToSelectedPeer(_ json:Dictionary<String,AnyObject>){
+  func sendDataToSelectedPeer(_ json: Dictionary<String, AnyObject>){
     do {
-      let jsonData = try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+      let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
       try self.session.send(jsonData, toPeers: [self.selectedPeer!], with: MCSessionSendDataMode.reliable)
       print("command \(json) --- > \(self.selectedPeer?.displayName)")
     } catch let error1 as NSError {
