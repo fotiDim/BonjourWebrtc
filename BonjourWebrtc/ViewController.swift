@@ -47,7 +47,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     let alert = UIAlertController(title: "Incoming Call",
                                   message: caller,
                                   preferredStyle: .alert)
-    let idx = peerListArray.index(of: caller) //
+    let idx = peerListArray.firstIndex(of: caller) //
     let acceptAction = UIAlertAction(title: "Accept",
                                      style: .default,
                                      handler: { (action:UIAlertAction) -> Void in

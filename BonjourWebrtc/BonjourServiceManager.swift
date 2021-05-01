@@ -54,7 +54,7 @@ class BonjourServiceManager : NSObject {
         try self.session.send(colorName.data(using: String.Encoding.utf8, allowLossyConversion: false)!, toPeers: session.connectedPeers, with: MCSessionSendDataMode.reliable)
       } catch let error1 as NSError {
         error = error1
-        print("Error \(error)")
+        print("Error \(String(describing: error))")
       }
     }
   }
@@ -70,7 +70,7 @@ class BonjourServiceManager : NSObject {
         print("connected peers --- > \(session.connectedPeers[index])")
       } catch let error1 as NSError {
         error = error1
-        print("\(error)")
+        print("\(String(describing: error))")
       }
     }
     
@@ -80,7 +80,7 @@ class BonjourServiceManager : NSObject {
     do {
       let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
       try self.session.send(jsonData, toPeers: [self.selectedPeer!], with: MCSessionSendDataMode.reliable)
-      print("command \(json) --- > \(self.selectedPeer?.displayName)")
+        print("command \(json) --- > \(String(describing: self.selectedPeer?.displayName))")
     } catch let error1 as NSError {
       print("\(error1)")
     }
@@ -128,6 +128,8 @@ extension MCSessionState {
     case .notConnected: return "NotConnected"
     case .connecting: return "Connecting"
     case .connected: return "Connected"
+    @unknown default:
+        fatalError()
     }
   }
   
@@ -139,7 +141,7 @@ extension BonjourServiceManager : MCSessionDelegate {
     print("peer \(peerID) didChangeState: \(state.stringValue())")
     self.delegate?.connectedDevicesChanged(self, connectedDevices: session.connectedPeers.map({$0.displayName}))
     print(session.connectedPeers.map({$0.displayName}))
-    var arr:[String] = session.connectedPeers.map({$0.displayName})
+    let arr:[String] = session.connectedPeers.map({$0.displayName})
     if arr.count > 0 {
       print(arr[0])
     }
@@ -148,17 +150,17 @@ extension BonjourServiceManager : MCSessionDelegate {
   
   func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
     
-    let str = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as! String
-    print("didReceiveData: \(str) from \(peerID.displayName) bytes")
+    let str: String? = String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+    print("didReceiveData: \(String(describing: str)) from \(peerID.displayName) bytes")
     let peerId = peerID.displayName
-    self.delegate?.receivedData(self, peerID: peerId, responseString: str)
+    self.delegate?.receivedData(self, peerID: peerId, responseString: str!)
   }
   
   func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
     print("didReceiveStream")
   }
   
-  func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
     print("didFinishReceivingResourceWithName")
   }
   

@@ -141,7 +141,7 @@ class WebrtcManager: NSObject {
     func peerConnection(_ peerConnection: RTCPeerConnection!, didSetSessionDescriptionWithError error: Error!) {
         DispatchQueue.main.async {
             if error != nil {
-                print("sdp error \(error.localizedDescription) \(error)")
+                print("sdp error \(error.localizedDescription) \(String(describing: error))")
                 assert(false)
             } else {
                 if self.initiator {

@@ -99,7 +99,7 @@ class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, We
         self.disconnect()
     }
   
-    func orientationChanged(_ notification:Notification){
+    @objc func orientationChanged(_ notification:Notification){
         if let _ = self.localVideoSize {
             self.videoView(self.localView!, didChangeVideoSize: self.localVideoSize!)
         }
@@ -150,7 +150,7 @@ class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, We
         }
     }
   
-    func toggleButtonContainer() {
+    @objc func toggleButtonContainer() {
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
             if (self.buttonContainerViewLeftConstraint!.constant <= -40.0) {
                 self.buttonContainerViewLeftConstraint!.constant=20.0
@@ -163,7 +163,7 @@ class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, We
         })
     }
   
-    func zoomRemote() {
+    @objc func zoomRemote() {
         //Toggle Aspect Fill or Fit
         self.isZoom = !self.isZoom;
         self.videoView(self.remoteView!, didChangeVideoSize: self.remoteVideoSize!)
@@ -182,7 +182,7 @@ class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, We
         DispatchQueue.main.async {
             let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
             do {
-                try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+                try audioSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
             } catch {
                     print("Audio Port Error");
             }
