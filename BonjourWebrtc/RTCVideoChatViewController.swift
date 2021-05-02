@@ -10,8 +10,7 @@ import UIKit
 import AVFoundation
 import WebRTC
 
-class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, WebrtcManagerProtocol, BonjourServiceManagerProtocol {
-    
+class RTCVideoChatViewController: UIViewController, RTCVideoViewDelegate, WebrtcManagerProtocol, BonjourServiceManagerProtocol {
     //Views, Labels, and Buttons
     @IBOutlet weak var remoteView: RTCEAGLVideoView?
     @IBOutlet weak var localView: RTCEAGLVideoView?
@@ -216,7 +215,7 @@ class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, We
         }
     }
   
-    func videoView(_ videoView: RTCEAGLVideoView, didChangeVideoSize size: CGSize) {
+    func videoView(_ videoView: RTCVideoRenderer, didChangeVideoSize size: CGSize) {
         DispatchQueue.main.async {
             let orientation: UIInterfaceOrientation = UIApplication.shared.statusBarOrientation
             UIView.animate(withDuration: 0.4, animations: { () -> Void in

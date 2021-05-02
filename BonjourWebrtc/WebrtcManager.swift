@@ -262,11 +262,11 @@ extension WebrtcManager {
         return RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
     }
     
-    func defaultMediaAudioConstraints() -> RTCMediaConstraints {
-        let valueLevelControl = shouldUseLevelControl ? "true" : "false"
-        let mandatoryConstraints = [ kRTCMediaConstraintsLevelControl : valueLevelControl ]
-        return RTCMediaConstraints(mandatoryConstraints: mandatoryConstraints, optionalConstraints: nil)
-    }
+//    func defaultMediaAudioConstraints() -> RTCMediaConstraints {
+//        let valueLevelControl = shouldUseLevelControl ? "true" : "false"
+//        let mandatoryConstraints = [ kRTCMediaConstraintsLevelControl : valueLevelControl ]
+//        return RTCMediaConstraints(mandatoryConstraints: mandatoryConstraints, optionalConstraints: nil)
+//    }
     
     func defaultPeerConnectionConstraints() -> RTCMediaConstraints {
         let value = isLoopback ? "false" : "true"

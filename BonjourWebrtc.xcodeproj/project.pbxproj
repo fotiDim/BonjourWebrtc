@@ -214,7 +214,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BonjourWebrtc/Pods-BonjourWebrtc-frameworks.sh",
-				"${PODS_ROOT}/WebRTC/WebRTC.framework",
+				"${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
