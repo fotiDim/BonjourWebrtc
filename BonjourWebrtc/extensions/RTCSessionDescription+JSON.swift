@@ -31,7 +31,7 @@ extension RTCSessionDescription {
     }
     
     func jsonDictionary() -> [String : AnyObject]{
-        var description = self.description
+        var description = self.sdp
         if let range = description.range(of: "RTCSessionDescription:\n") {
             description.removeSubrange(range)
         }

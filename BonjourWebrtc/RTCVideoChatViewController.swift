@@ -223,7 +223,7 @@ class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, We
                 let containerWidth: CGFloat = self.view.frame.size.width
                 let containerHeight: CGFloat = self.view.frame.size.height
                 let defaultAspectRatio: CGSize = CGSize(width: 4, height: 3)
-                if videoView == self.localView {
+                if videoView.isEqual(self.remoteView) {
                     self.localVideoSize = size
                     let aspectRatio: CGSize = size.equalTo(CGSize.zero) ? defaultAspectRatio : size
                     var videoRect: CGRect = self.view.bounds
@@ -243,7 +243,7 @@ class RTCVideoChatViewController: UIViewController, RTCEAGLVideoViewDelegate, We
                         self.localViewBottomConstraint!.constant = containerHeight/2.0 - videoFrame.size.height/2.0
                         self.localViewRightConstraint!.constant = containerWidth/2.0 - videoFrame.size.width/2.0
                     }
-                } else if videoView == self.remoteView {
+                } else if videoView.isEqual(self.remoteView) {
                     self.remoteVideoSize = size
                     let aspectRatio: CGSize = size.equalTo(CGSize.zero) ? defaultAspectRatio : size
                     let videoRect: CGRect = self.view.bounds

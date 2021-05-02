@@ -12,13 +12,19 @@ import WebRTC
 
 class WebrtcManager: NSObject {
     
-    let kARDMediaStreamId = "ARDAMS"
-    let kARDAudioTrackId  = "ARDAMSa0"
-    let kARDVideoTrackId  = "ARDAMSv0"
+    var kARDMediaStreamId: String {
+        UUID().uuidString
+    }
+    var kARDAudioTrackId: String {
+        UUID().uuidString
+    }
+    var kARDVideoTrackId: String {
+        UUID().uuidString
+    }
     
     var peerConnection: RTCPeerConnection?
     var peerConnectionFactory: RTCPeerConnectionFactory! = RTCPeerConnectionFactory()
-    var videoCapturer: NSObject?//RTCVideoCapturer?
+    var videoCapturer: RTCCameraVideoCapturer?
     var localAudioTrack: RTCAudioTrack?
     var localVideoTrack: RTCVideoTrack?
     var remoteSDP: RTCSessionDescription?
@@ -56,8 +62,19 @@ class WebrtcManager: NSObject {
     }
 
     func addLocalMediaStream() {
-        let videoConstraints = defaultMediaStreamConstraints()
-        let videoSource = peerConnectionFactory.avFoundationVideoSource(with: videoConstraints)
+        let videoSource = peerConnectionFactory.videoSource()
+        videoCapturer = RTCCameraVideoCapturer(delegate: videoSource)
+
+        let frontCamera = (RTCCameraVideoCapturer.captureDevices().first { $0.position == .front })
+
+        // choose highest res
+        let format = (RTCCameraVideoCapturer.supportedFormats(for: frontCamera!).sorted { (f1, f2) -> Bool in
+        let width1 = CMVideoFormatDescriptionGetDimensions(f1.formatDescription).width
+        let width2 = CMVideoFormatDescriptionGetDimensions(f2.formatDescription).width
+        return width1 < width2
+        }).last
+
+        videoCapturer?.startCapture(with: frontCamera!, format: format!, fps: 10)
         localVideoTrack = peerConnectionFactory.videoTrack(with: videoSource, trackId: kARDVideoTrackId)
         
         localAudioTrack = peerConnectionFactory.audioTrack(withTrackId: kARDAudioTrackId)
