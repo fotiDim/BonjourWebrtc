@@ -41,7 +41,7 @@ class WebrtcManager: NSObject {
         // Create peer connection.
         let config: RTCConfiguration = RTCConfiguration()
         let iceServer = RTCIceServer(urlStrings: ["stun:stun.l.google.com:19302"], username: nil, credential: nil)
-        config.iceServers = [iceServer]
+//        config.iceServers = [iceServer]
         peerConnection = peerConnectionFactory.peerConnection(with: config, constraints: defaultPeerConnectionConstraints(), delegate: self)
     }
     
