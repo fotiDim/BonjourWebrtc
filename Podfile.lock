@@ -1,16 +1,16 @@
 PODS:
-  - GoogleWebRTC (1.1.31999)
+  - WebRTC-lib (94.0.0)
 
 DEPENDENCIES:
-  - GoogleWebRTC
+  - WebRTC-lib
 
 SPEC REPOS:
   trunk:
-    - GoogleWebRTC
+    - WebRTC-lib
 
 SPEC CHECKSUMS:
-  GoogleWebRTC: b39a78c4f5cc6b0323415b9233db03a2faa7b0f0
+  WebRTC-lib: f76423cdaedf25145b59a1f691e0f371e9c262a5
 
-PODFILE CHECKSUM: 39d6e039037bbbdb304e6d28b5835e20ddd951bb
+PODFILE CHECKSUM: 80ea542e34cdd9e75eec92b78a3596f0d9fbf12b
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
